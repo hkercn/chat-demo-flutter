@@ -1,4 +1,4 @@
-package com.tencent.flutter.tuikit
+package com.tencent.flutter.timuikit
 
 import io.flutter.embedding.android.FlutterActivity
 

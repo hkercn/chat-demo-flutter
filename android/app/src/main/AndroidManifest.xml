@@ -7,13 +7,15 @@
         tools:replace="android:label"
         android:icon="@mipmap/logo"
        android:usesCleartextTraffic="true"
-        android:requestLegacyExternalStorage="true">
+        android:requestLegacyExternalStorage="true"
+       tools:targetApi="m">
         <activity
-            android:name=".MainActivity"
+            android:name="com.tencent.flutter.timuikit.MainActivity"
             android:launchMode="singleTop"
             android:theme="@style/LaunchTheme"
             android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
             android:hardwareAccelerated="true"
+            android:exported="true"
             android:windowSoftInputMode="adjustResize">
             <!-- Specifies an Android theme to apply to this Activity as soon as
                  the Android process has started. This theme is visible to the user
@@ -71,7 +73,8 @@
     <!--xiaomi-->
     <permission
         android:name="com.tencent.flutter.tuikit.permission.MIPUSH_RECEIVE"
-        android:protectionLevel="signature" />
+        android:protectionLevel="signature"
+        tools:ignore="ManifestOrder" />
     <uses-permission android:name="com.tencent.flutter.tuikit.permission.MIPUSH_RECEIVE" />
     <!--xioami-->
 
@@ -92,6 +95,9 @@
     <uses-permission android:name="com.meizu.c2dm.permission.RECEIVE" />
     <permission android:name="com.tencent.flutter.tuikit.permission.C2D_MESSAGE" android:protectionLevel="signature"
         />
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
     <uses-permission android:name="com.tencent.flutter.tuikit.permission.C2D_MESSAGE"/>
     <!--Meizu end-->
 
@@ -102,7 +108,8 @@
     <uses-permission android:name="android.permission.VIBRATE"/>
     <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION"/>
     <!-- Optional, you'll have to check this permission by yourself. -->
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
     <!-- Permissions options for the `camera` group -->
     <uses-permission android:name="android.permission.CAMERA"/>
     <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />

@@ -27,6 +27,16 @@ class LoginPage extends StatelessWidget {
   final Function? initIMSDK;
   const LoginPage({Key? key, this.initIMSDK}) : super(key: key);
 
+  removeLocalSetting() async {
+    Future<SharedPreferences> _prefs = SharedPreferences.getInstance();
+    SharedPreferences prefs = await _prefs;
+    prefs.remove("smsLoginToken");
+    prefs.remove("smsLoginPhone");
+    prefs.remove("smsLoginUserID");
+    prefs.remove("channelListMain");
+    prefs.remove("discussListMain");
+  }
+
   @override
   Widget build(BuildContext context) {
     return WillPopScope(

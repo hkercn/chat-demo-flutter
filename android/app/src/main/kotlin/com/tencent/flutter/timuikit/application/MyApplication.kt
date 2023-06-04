@@ -1,4 +1,4 @@
-package com.tencent.flutter.tuikit.application
+package com.tencent.flutter.timuikit.application
 
 import com.baidu.mapapi.base.BmfMapApplication
 
