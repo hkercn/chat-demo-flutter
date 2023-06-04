@@ -5,16 +5,16 @@ enum WebUrl { personalInfo, thirdPartyInfo }
 
 class IMDemoConfig {
   static const int sdkappid =
-      int.fromEnvironment('SDK_APPID', defaultValue: 0);
+      int.fromEnvironment('SDK_APPID', defaultValue: 1400813451);
   static const String key = String.fromEnvironment('KEY',
       defaultValue:
-          "");
+          "a669c12dcb20450456ecf9bf0e1f4dc0fdeba3e61b53c01d849d40cec814f0ed");
   static const String appVersion =
       String.fromEnvironment('APP_VERSION', defaultValue: "0.0.1");
   static const String projectType =
       String.fromEnvironment('PROJECT_TYPE', defaultValue: "discord");
   static const bool productEnv =
-      bool.fromEnvironment('ISPRODUCT_ENV', defaultValue: false);
+      bool.fromEnvironment('ISPRODUCT_ENV', defaultValue: true);
   static const bool openShareFeature =
       bool.fromEnvironment('OPEN_SHARE_FEATURE', defaultValue: true);
   static const String smsLoginHttpBase =
@@ -22,12 +22,12 @@ class IMDemoConfig {
   // static const String captchaUrl =
   // 'https://imgcache.qq.com/operation/dianshi/other/captcha.11f3ef11e3657473779f28383735c6a680a87180.html';
   static const String captchaUrl = 'https://comm.qq.com/login/captcha/app.html';
-  static const String webCaptchaUrl =
-      '';
   static const String macosCaptchaUrl =
       '';
   static const String windowsCaptchaUrl =
       '';
+  static const String webCaptchaUrl =
+      'https://comm.qq.com/login/captcha/index.html';
   static const int loglevel = 3;
   static String appName = TIM_t("Tencent IM");
   static const pushConfig = <String, Map<String, double>>{
